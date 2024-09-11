@@ -1,0 +1,233 @@
+.block_garden_project_art6 {
+    max-width: 1235px;
+    margin: 0 auto;
+    padding: 75px 40px 54px;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+
+    @include xs {
+        padding: 36px 15px 56px;
+    }
+}
+
+.block_garden_project_art6__title {
+    margin: 0 0 42px 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 122%;
+    text-align: center;
+    color: #000;
+
+    @include xs {
+        margin-bottom: 24px;
+    }
+}
+
+.block_garden_project_art6__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 214px);
+    gap: 15px 20px;
+    justify-content: space-between;
+    max-width: 1155px;
+    margin: 0 auto;
+    padding: 0 28px;
+
+    @include md {
+        padding: 0;
+    }
+
+    @include sm {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include xs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xxs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3px 20px;
+    }
+}
+
+.block_garden_project_art6__num {
+    position: relative;
+    width: 100%;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 49.5%;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    @include md {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    @include xxs {
+        img {
+            width: 94%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.block_garden_project_art6__ellipse {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 21.5%;
+    }
+
+    span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgb(242, 246, 236);
+        border: 3px solid #70a72f;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #70a72f;
+            transform: translateY(-50%);
+        }
+    }
+
+    @include xxs {
+        width: 64%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+            padding-top: 24%;
+        }
+
+        span {
+            border: 2px solid #70a72f;
+
+            &::before {
+                width: 140%;
+                height: 2px;
+            }
+        }
+    }
+}
+
+.block_garden_project_art6__item:nth-child(4),
+.block_garden_project_art6__item:nth-child(8) {
+    .block_garden_project_art6__ellipse span::before {
+        display: none;
+    }
+}
+
+@include xs {
+    .block_garden_project_art6__item:nth-child(n) {
+        .block_garden_project_art6__ellipse span::before {
+            display: block;
+        }
+    }
+
+    .block_garden_project_art6__item:nth-child(3),
+    .block_garden_project_art6__item:nth-child(6),
+    .block_garden_project_art6__item:nth-child(8) {
+        .block_garden_project_art6__ellipse span::before {
+            display: none;
+        }
+    }
+}
+
+@include xxs {
+    .block_garden_project_art6__item:nth-child(n) {
+        .block_garden_project_art6__ellipse span::before {
+            display: block;
+        }
+    }
+
+    .block_garden_project_art6__item:nth-child(2n + 2) {
+        .block_garden_project_art6__ellipse span::before {
+            display: none;
+        }
+    }
+}
+
+.block_garden_project_art6__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 122%;
+    text-align: center;
+    color: #000;
+
+    @include sm {
+        font-size: 18px;
+    }
+
+    @include xs {
+        font-size: 16px;
+        line-height: 120%;
+    }
+}
+
+.block_garden_project_art6__picture {
+    position: relative;
+    top: -30px;
+    width: 44.6%;
+    min-width: 450px;
+    margin: 0 auto;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @include xs {
+        top: 0;
+        margin-top: 20px;
+    }
+
+    @include xxs {
+        width: 100%;
+        min-width: unset;
+    }
+}

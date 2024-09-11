@@ -1,5 +1,5 @@
-.block_preim_krug_art6 {
-    padding: 31px 0 33px;
+.block_benefits_art6 {
+    padding: 25px 0 33px;
 
     *,
     *::before,
@@ -19,7 +19,7 @@
     }
 }
 
-.block_preim_krug_art6__container {
+.block_benefits_art6__container {
     position: relative;
     width: 100%;
     max-width: 1580px;
@@ -40,7 +40,7 @@
         top: 50%;
         left: 50%;
         z-index: 1;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -46%);
         width: 96%;
         max-width: 1156px;
         aspect-ratio: 1156 / 267;
@@ -49,12 +49,6 @@
     }
 
     @include sm {
-        &::after {
-            aspect-ratio: 1156 / 410;
-        }
-    }
-
-    @include xs {
         justify-content: flex-start;
 
         &::after {
@@ -63,36 +57,35 @@
     }
 }
 
-.block_preim_krug_art6__list {
+.block_benefits_art6__list {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(3, 206px);
-    gap: 35px 110px;
+    grid-template-columns: repeat(4, 206px);
+    gap: 35px 25px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1154px;
 
     @include sm {
-        gap: 25px 50px;
-    }
-
-    @include xs {
         grid-template-columns: 1fr;
         gap: 20px 0;
     }
 }
 
-.block_preim_krug_art6__item {
+.block_benefits_art6__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 
-    @include xs {
+    @include sm {
         flex-direction: row;
         gap: 0 26px;
     }
 }
 
-.block_preim_krug_art6__icon {
+.block_benefits_art6__icon {
     flex: 0 0 69px;
     display: block;
     width: 69px;
@@ -100,7 +93,7 @@
     object-fit: contain;
 }
 
-.block_preim_krug_art6__descr {
+.block_benefits_art6__descr {
     font-weight: 400;
     font-size: 20px;
     text-align: center;
