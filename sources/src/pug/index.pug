@@ -1,0 +1,71 @@
+extends base/_layout
+block vars
+    - var pageName = 'index'
+block head
+    title Advice Consulting
+block page
+
+    .block_preim_krug_art6
+        .block_preim_krug_art6__container
+            .block_preim_krug_art6__list
+
+                -
+                    var preim_list = [
+                        {icon: './images/block_preim_krug_art6/icon_1.svg', descr: 'Опыт на международном рынке более 8 лет'},
+                        {icon: './images/block_preim_krug_art6/icon_2.svg', descr: ' 97% приживаемость посадочного материала'},
+                        {icon: './images/block_preim_krug_art6/icon_3.svg', descr: 'Более 10 000 гектар питомников'},
+                        {icon: './images/block_preim_krug_art6/icon_4.svg', descr: 'Доставка в любую точку мира'},
+                        {icon: './images/block_preim_krug_art6/icon_5.svg', descr: ' Более 3000 видов саженцев '},
+                        {icon: './images/block_preim_krug_art6/icon_6.svg', descr: 'Полный спектр услуг по выращиванию садов'}
+                    ]
+                
+                each item in preim_list
+
+                    .block_preim_krug_art6__item 
+                        img.block_preim_krug_art6__icon(src= item.icon  alt="" decoding="async" loading="lazy" width="69" height="69")
+                        span.block_preim_krug_art6__descr= item.descr
+
+
+
+    .block_konsult_art6
+        .block_konsult_art6__container
+
+            h2.block_konsult_art6__title Агрономические консультации в #[span Advice&Consulting #[sup ®]]
+
+            -
+                var konsult_list = [
+                    {src: 'block_konsult_art6/pic_1', descr: 'Отчет и программа повышения урожайности'},
+                    {src: 'block_konsult_art6/pic_2', descr: 'Прогноз сборки урожая'},
+                    {src: 'block_konsult_art6/pic_3', descr: 'Фертигация и орошение'},
+                    {src: 'block_konsult_art6/pic_4', descr: 'Оценка преобретения пестицидов и удобрений'},
+                    {src: 'block_konsult_art6/pic_5', descr: 'Оценка и подборка техники и оборудования'},
+                    {src: 'block_konsult_art6/pic_6', descr: 'Исследование и взятие пробы для анализа почвы и воды'},
+                    {src: 'block_konsult_art6/pic_7', descr: 'Схема химической защиты и комплексная борьба'},
+                    {src: 'block_konsult_art6/pic_8', descr: 'Химическое и ручное прореживание'},
+                    {src: 'block_konsult_art6/pic_9', descr: 'Схема удобрений: подкормки листовая и корневая '},
+                    {src: 'block_konsult_art6/pic_10', descr: 'Необходимые обработки перед сбором урожая для сохранения фруктов'},
+                    {src: 'block_konsult_art6/pic_11', descr: 'Обучение агронома компании'},
+                    {src: 'block_konsult_art6/pic_12', descr: 'Обрезка '}
+                ]
+
+
+
+            .block_konsult_art6__list
+
+                each item in konsult_list
+
+                    .block_konsult_art6__item
+                        .block_konsult_art6__pic
+                            +pictureSize(item.src, 'jpg', 'x2', 112, 112)
+                        span.block_konsult_art6__descr= item.descr
+
+
+
+
+
+
+
+
+
+
+
